@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BA66189185CD18D00DA639F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA66188185CD18D00DA639F /* Foundation.framework */; };
+		5BA6618B185CD18D00DA639F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA6618A185CD18D00DA639F /* CoreGraphics.framework */; };
+		5BA6618D185CD18D00DA639F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA6618C185CD18D00DA639F /* UIKit.framework */; };
+		5BA66193185CD18D00DA639F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BA66191185CD18D00DA639F /* InfoPlist.strings */; };
+		5BA66195185CD18D00DA639F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA66194185CD18D00DA639F /* main.m */; };
+		5BA66199185CD18D00DA639F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA66198185CD18D00DA639F /* AppDelegate.m */; };
+		5BA6619C185CD18D00DA639F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6619A185CD18D00DA639F /* Main.storyboard */; };
+		5BA6619F185CD18D00DA639F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6619E185CD18D00DA639F /* ViewController.m */; };
+		5BA661A1185CD18D00DA639F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA661A0185CD18D00DA639F /* Images.xcassets */; };
+		5BA661A8185CD18D00DA639F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA661A7185CD18D00DA639F /* XCTest.framework */; };
+		5BA661A9185CD18D00DA639F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA66188185CD18D00DA639F /* Foundation.framework */; };
+		5BA661AA185CD18D00DA639F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA6618C185CD18D00DA639F /* UIKit.framework */; };
+		5BA661B2185CD18D00DA639F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BA661B0185CD18D00DA639F /* InfoPlist.strings */; };
+		5BA661B4185CD18D00DA639F /* TasteMakersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA661B3185CD18D00DA639F /* TasteMakersTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BA661AB185CD18D00DA639F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BA6617D185CD18D00DA639F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA66184185CD18D00DA639F;
+			remoteInfo = TasteMakers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5BA66185185CD18D00DA639F /* TasteMakers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteMakers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA66188185CD18D00DA639F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BA6618A185CD18D00DA639F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5BA6618C185CD18D00DA639F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5BA66190185CD18D00DA639F /* TasteMakers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TasteMakers-Info.plist"; sourceTree = "<group>"; };
+		5BA66192185CD18D00DA639F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BA66194185CD18D00DA639F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BA66196185CD18D00DA639F /* TasteMakers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TasteMakers-Prefix.pch"; sourceTree = "<group>"; };
+		5BA66197185CD18D00DA639F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5BA66198185CD18D00DA639F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5BA6619B185CD18D00DA639F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BA6619D185CD18D00DA639F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5BA6619E185CD18D00DA639F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5BA661A0185CD18D00DA639F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5BA661A6185CD18D00DA639F /* TasteMakersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteMakersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA661A7185CD18D00DA639F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5BA661AF185CD18D00DA639F /* TasteMakersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TasteMakersTests-Info.plist"; sourceTree = "<group>"; };
+		5BA661B1185CD18D00DA639F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BA661B3185CD18D00DA639F /* TasteMakersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TasteMakersTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BA66182185CD18D00DA639F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA6618B185CD18D00DA639F /* CoreGraphics.framework in Frameworks */,
+				5BA6618D185CD18D00DA639F /* UIKit.framework in Frameworks */,
+				5BA66189185CD18D00DA639F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA661A3185CD18D00DA639F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA661A8185CD18D00DA639F /* XCTest.framework in Frameworks */,
+				5BA661AA185CD18D00DA639F /* UIKit.framework in Frameworks */,
+				5BA661A9185CD18D00DA639F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BA6617C185CD18D00DA639F = {
+			isa = PBXGroup;
+			children = (
+				5BA6618E185CD18D00DA639F /* TasteMakers */,
+				5BA661AD185CD18D00DA639F /* TasteMakersTests */,
+				5BA66187185CD18D00DA639F /* Frameworks */,
+				5BA66186185CD18D00DA639F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BA66186185CD18D00DA639F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BA66185185CD18D00DA639F /* TasteMakers.app */,
+				5BA661A6185CD18D00DA639F /* TasteMakersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BA66187185CD18D00DA639F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BA66188185CD18D00DA639F /* Foundation.framework */,
+				5BA6618A185CD18D00DA639F /* CoreGraphics.framework */,
+				5BA6618C185CD18D00DA639F /* UIKit.framework */,
+				5BA661A7185CD18D00DA639F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BA6618E185CD18D00DA639F /* TasteMakers */ = {
+			isa = PBXGroup;
+			children = (
+				5BA66197185CD18D00DA639F /* AppDelegate.h */,
+				5BA66198185CD18D00DA639F /* AppDelegate.m */,
+				5BA6619A185CD18D00DA639F /* Main.storyboard */,
+				5BA6619D185CD18D00DA639F /* ViewController.h */,
+				5BA6619E185CD18D00DA639F /* ViewController.m */,
+				5BA661A0185CD18D00DA639F /* Images.xcassets */,
+				5BA6618F185CD18D00DA639F /* Supporting Files */,
+			);
+			path = TasteMakers;
+			sourceTree = "<group>";
+		};
+		5BA6618F185CD18D00DA639F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BA66190185CD18D00DA639F /* TasteMakers-Info.plist */,
+				5BA66191185CD18D00DA639F /* InfoPlist.strings */,
+				5BA66194185CD18D00DA639F /* main.m */,
+				5BA66196185CD18D00DA639F /* TasteMakers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BA661AD185CD18D00DA639F /* TasteMakersTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BA661B3185CD18D00DA639F /* TasteMakersTests.m */,
+				5BA661AE185CD18D00DA639F /* Supporting Files */,
+			);
+			path = TasteMakersTests;
+			sourceTree = "<group>";
+		};
+		5BA661AE185CD18D00DA639F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BA661AF185CD18D00DA639F /* TasteMakersTests-Info.plist */,
+				5BA661B0185CD18D00DA639F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BA66184185CD18D00DA639F /* TasteMakers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA661B7185CD18D00DA639F /* Build configuration list for PBXNativeTarget "TasteMakers" */;
+			buildPhases = (
+				5BA66181185CD18D00DA639F /* Sources */,
+				5BA66182185CD18D00DA639F /* Frameworks */,
+				5BA66183185CD18D00DA639F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TasteMakers;
+			productName = TasteMakers;
+			productReference = 5BA66185185CD18D00DA639F /* TasteMakers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BA661A5185CD18D00DA639F /* TasteMakersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA661BA185CD18D00DA639F /* Build configuration list for PBXNativeTarget "TasteMakersTests" */;
+			buildPhases = (
+				5BA661A2185CD18D00DA639F /* Sources */,
+				5BA661A3185CD18D00DA639F /* Frameworks */,
+				5BA661A4185CD18D00DA639F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BA661AC185CD18D00DA639F /* PBXTargetDependency */,
+			);
+			name = TasteMakersTests;
+			productName = TasteMakersTests;
+			productReference = 5BA661A6185CD18D00DA639F /* TasteMakersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BA6617D185CD18D00DA639F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Paul Oostenrijk";
+				TargetAttributes = {
+					5BA661A5185CD18D00DA639F = {
+						TestTargetID = 5BA66184185CD18D00DA639F;
+					};
+				};
+			};
+			buildConfigurationList = 5BA66180185CD18D00DA639F /* Build configuration list for PBXProject "TasteMakers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BA6617C185CD18D00DA639F;
+			productRefGroup = 5BA66186185CD18D00DA639F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BA66184185CD18D00DA639F /* TasteMakers */,
+				5BA661A5185CD18D00DA639F /* TasteMakersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BA66183185CD18D00DA639F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA661A1185CD18D00DA639F /* Images.xcassets in Resources */,
+				5BA66193185CD18D00DA639F /* InfoPlist.strings in Resources */,
+				5BA6619C185CD18D00DA639F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA661A4185CD18D00DA639F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA661B2185CD18D00DA639F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BA66181185CD18D00DA639F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA6619F185CD18D00DA639F /* ViewController.m in Sources */,
+				5BA66199185CD18D00DA639F /* AppDelegate.m in Sources */,
+				5BA66195185CD18D00DA639F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA661A2185CD18D00DA639F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA661B4185CD18D00DA639F /* TasteMakersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BA661AC185CD18D00DA639F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BA66184185CD18D00DA639F /* TasteMakers */;
+			targetProxy = 5BA661AB185CD18D00DA639F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BA66191185CD18D00DA639F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA66192185CD18D00DA639F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5BA6619A185CD18D00DA639F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA6619B185CD18D00DA639F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BA661B0185CD18D00DA639F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA661B1185CD18D00DA639F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BA661B5185CD18D00DA639F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5BA661B6185CD18D00DA639F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BA661B8185CD18D00DA639F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TasteMakers/TasteMakers-Prefix.pch";
+				INFOPLIST_FILE = "TasteMakers/TasteMakers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5BA661B9185CD18D00DA639F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TasteMakers/TasteMakers-Prefix.pch";
+				INFOPLIST_FILE = "TasteMakers/TasteMakers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5BA661BB185CD18D00DA639F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TasteMakers.app/TasteMakers";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TasteMakers/TasteMakers-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TasteMakersTests/TasteMakersTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5BA661BC185CD18D00DA639F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TasteMakers.app/TasteMakers";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TasteMakers/TasteMakers-Prefix.pch";
+				INFOPLIST_FILE = "TasteMakersTests/TasteMakersTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BA66180185CD18D00DA639F /* Build configuration list for PBXProject "TasteMakers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA661B5185CD18D00DA639F /* Debug */,
+				5BA661B6185CD18D00DA639F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA661B7185CD18D00DA639F /* Build configuration list for PBXNativeTarget "TasteMakers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA661B8185CD18D00DA639F /* Debug */,
+				5BA661B9185CD18D00DA639F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BA661BA185CD18D00DA639F /* Build configuration list for PBXNativeTarget "TasteMakersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA661BB185CD18D00DA639F /* Debug */,
+				5BA661BC185CD18D00DA639F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BA6617D185CD18D00DA639F /* Project object */;
+}
