@@ -23,4 +23,5 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *detailsNavigationBar;
 @property (strong, nonatomic) DetailsPageViewController *pageViewControllerInstance;
 @property (nonatomic, weak) id<DetailsViewDelegate>  delegate;
+
 @end

@@ -146,6 +146,20 @@
     }
 }
 
+CGRect screenBoundsDependOnOrientation()
+{
+    CGRect screenBounds = [UIScreen mainScreen].bounds ;
+    CGFloat width = CGRectGetWidth(screenBounds)  ;
+    CGFloat height = CGRectGetHeight(screenBounds) ;
+    UIInterfaceOrientation interfaceOrientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    if(UIInterfaceOrientationIsPortrait(interfaceOrientation)){
+        screenBounds.size = CGSizeMake(width, height);
+    }else if(UIInterfaceOrientationIsLandscape(interfaceOrientation)){
+        screenBounds.size = CGSizeMake(height, width);
+    }
+    return screenBounds ;
+}
 
 /*
  This function is for animating the objects
@@ -159,8 +173,8 @@
     _restaurant.hided = YES;
     [[ RestaurantDetailsManager sharedInstance] setRestaurant:_restaurant];
     
-    UIView *hideView = [[UIView alloc] init];
-    hideView.frame = [self.view frame];
+    UIView *hideView = [[UIView alloc] initWithFrame:screenBoundsDependOnOrientation()];
+    //hideView.frame = rootView.frame;
     hideView.backgroundColor = [UIColor redColor];
     
     
