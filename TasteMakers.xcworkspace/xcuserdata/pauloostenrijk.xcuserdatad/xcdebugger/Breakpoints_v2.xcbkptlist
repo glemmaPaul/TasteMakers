@@ -228,11 +228,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TasteMakers/Controllers/NewTasteViewController.m"
-            timestampString = "409154548.407957"
+            timestampString = "409235879.599527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "-saveTaste:"
             landmarkType = "5">
          </BreakpointContent>

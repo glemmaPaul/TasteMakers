@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Paul Oostenrijk. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FilterViewController.h"
 #import "FilterViewControllerDelegate.h"
 #import "FilterManager.h"
 #import "FilterManagerDelegate.h"

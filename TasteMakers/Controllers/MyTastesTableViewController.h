@@ -10,11 +10,15 @@
 #import "MyTasteManager.h"
 #import "TasteRestaurantsDelegate.h"
 #import "UserPreferences.h"
-
-@interface MyTastesTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, TasteRestaurantsDelegate>
+#import "CreateTasteDelegate.h"
+#import "NotificationManager.h"
+#import "NewTasteViewController.h"
+@interface MyTastesTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CreateTasteDelegate, TasteRestaurantsDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *MyTastersTableView;
 @property MyTasteManager * manager;
-@property NSArray *restaurants;
+@property NSMutableArray *restaurants;
 @property (strong, nonatomic) UserPreferences *userPreferences;
+@property NotificationManager *notificationManager;
+@property NewTasteViewController *createTasteViewController;
 @end

@@ -285,36 +285,15 @@
 		5B15FD67185CD1DD00857F1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5B98BFFF186452BB00AA3BF3 /* Entities */,
 				5B85C7C0185F5A260087C10D /* Managers */,
 				5B85C79E185EFEAF0087C10D /* Delegates */,
-				5B15FD71185CD48D00857F1A /* Restaurants */,
 				5B15FD68185CD1FD00857F1A /* TasteApiCommunicator.h */,
 				5B15FD69185CD1FD00857F1A /* TasteApiCommunicator.m */,
-				5B15FDC0185DEE9A00857F1A /* RestaurantPlacemark.h */,
-				5B15FDC1185DEE9A00857F1A /* RestaurantPlacemark.m */,
 				5B85C714185E2F750087C10D /* UserPreferences.h */,
 				5B85C715185E2F750087C10D /* UserPreferences.m */,
-				5B85C717185E30C40087C10D /* Review.h */,
-				5B85C718185E30C40087C10D /* Review.m */,
-				5B85C7A0185EFF000087C10D /* User.h */,
-				5B85C7A1185EFF000087C10D /* User.m */,
-				5BE581011861EC3A00A54D96 /* CheckIn.h */,
-				5BE581021861EC3A00A54D96 /* CheckIn.m */,
-				5B376F78186334F40055C083 /* Filter.h */,
-				5B376F79186334F40055C083 /* Filter.m */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		5B15FD71185CD48D00857F1A /* Restaurants */ = {
-			isa = PBXGroup;
-			children = (
-				5B15FD72185CD4A800857F1A /* RestaurantCollection.h */,
-				5B15FD73185CD4A800857F1A /* RestaurantCollection.m */,
-				5B15FD75185CD50300857F1A /* Restaurant.h */,
-				5B15FD76185CD50300857F1A /* Restaurant.m */,
-			);
-			name = Restaurants;
 			sourceTree = "<group>";
 		};
 		5B15FD78185CF72200857F1A /* STTwitter */ = {
@@ -359,6 +338,8 @@
 		5B15FD9D185D074500857F1A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5BA6619D185CD18D00DA639F /* ViewController.h */,
+				5BA6619E185CD18D00DA639F /* ViewController.m */,
 				5B85C71A185E3F720087C10D /* DetailsView */,
 				5B15FDA1185D082000857F1A /* RestaurantTableViewController.h */,
 				5B15FDA2185D082000857F1A /* RestaurantTableViewController.m */,
@@ -523,6 +504,27 @@
 			name = Xibs;
 			sourceTree = "<group>";
 		};
+		5B98BFFF186452BB00AA3BF3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5B15FDC0185DEE9A00857F1A /* RestaurantPlacemark.h */,
+				5B15FDC1185DEE9A00857F1A /* RestaurantPlacemark.m */,
+				5B15FD72185CD4A800857F1A /* RestaurantCollection.h */,
+				5B15FD73185CD4A800857F1A /* RestaurantCollection.m */,
+				5B15FD75185CD50300857F1A /* Restaurant.h */,
+				5B15FD76185CD50300857F1A /* Restaurant.m */,
+				5B85C717185E30C40087C10D /* Review.h */,
+				5B85C718185E30C40087C10D /* Review.m */,
+				5B85C7A0185EFF000087C10D /* User.h */,
+				5B85C7A1185EFF000087C10D /* User.m */,
+				5BE581011861EC3A00A54D96 /* CheckIn.h */,
+				5BE581021861EC3A00A54D96 /* CheckIn.m */,
+				5B376F78186334F40055C083 /* Filter.h */,
+				5B376F79186334F40055C083 /* Filter.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		5BA6617C185CD18D00DA639F = {
 			isa = PBXGroup;
 			children = (
@@ -568,8 +570,6 @@
 				5BA66197185CD18D00DA639F /* AppDelegate.h */,
 				5BA66198185CD18D00DA639F /* AppDelegate.m */,
 				5BA6619A185CD18D00DA639F /* Main.storyboard */,
-				5BA6619D185CD18D00DA639F /* ViewController.h */,
-				5BA6619E185CD18D00DA639F /* ViewController.m */,
 				5BA661A0185CD18D00DA639F /* Images.xcassets */,
 				5BE5810A1861F65400A54D96 /* TabBarImages.xcassets */,
 				5B15FDAC185D19A800857F1A /* thumbnail_preview.png */,

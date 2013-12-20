@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  IntroViewController.m
 //  TasteMakers
 //
 //  Created by Paul Oostenrijk on 14-12-13.
@@ -12,7 +12,7 @@
 #import "CAKeyframeAnimation+AHEasing.h"
 #import "STTwitter.h"
 
-@interface ViewController () 
+@interface ViewController ()
 @property (nonatomic, strong) STTwitterAPI *twitter;
 @end
 
@@ -52,14 +52,16 @@
     
     if (![userPreferences isUserLoggedIn]) {
         
-        NSLog(@"User not logged in");
+        
+        
         // show twitter button;
         [loginButton setHidden:NO];
         [welcomeMessage setHidden:YES];
         
     }
     else {
-        NSLog(@"User logged in");
+        [self performSelector:@selector(openTabBarController) withObject:nil afterDelay:2];
+        
         [loginButton setHidden:YES];
         
         User *_user = [userPreferences getUserObject];
@@ -108,6 +110,15 @@
     
     [introImage.layer addAnimation: rotateImage forKey: @"rotateAnimation"];
     
+}
+
+- (void) openTabBarController {
+    // this functions will open the tabbarcontroller automatically
+    NSLog(@"Animate");
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UITabBarController *tabBarController = (UITabBarController *)[storyboard instantiateViewControllerWithIdentifier:@"RootTabBar"];
+    
+    [self presentViewController:tabBarController animated:YES completion:nil];
 }
 
 

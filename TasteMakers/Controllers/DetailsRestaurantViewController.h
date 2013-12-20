@@ -15,7 +15,6 @@
 
 @interface DetailsRestaurantViewController : UIViewController
 
--(void) startAnimatingObjects;
 @property Restaurant *restaurant;
 @property (strong, nonatomic) IBOutlet UIView *blueBackgroundView;
 @property (weak, nonatomic) NSString * mode;

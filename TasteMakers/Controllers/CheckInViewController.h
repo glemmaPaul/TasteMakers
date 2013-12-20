@@ -10,8 +10,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CheckInDelegate.h"
 #import "CheckInManager.h"
-@interface CheckInViewController : UIViewController <UITableViewDataSource,UITableViewDelegate, CLLocationManagerDelegate, CheckInDelegate> {
-    CLLocationManager *locationManager;
+#import "LocationManagerObserver.h"
+#import "LocationManagerDelegate.h"
+
+@interface CheckInViewController : UIViewController <UITableViewDataSource,UITableViewDelegate, LocationManagerDelegate, CheckInDelegate> {
+    LocationManagerObserver *locationManager;
 }
 
 @property(nonatomic) CLLocation *bestEffortAtLocation;

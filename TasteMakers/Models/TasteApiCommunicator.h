@@ -16,7 +16,7 @@
 @interface TasteApiCommunicator : NSObject
 
 @property (weak, nonatomic) id<TasteApiCommunicatorDelegate> delegate;
-- (void)getRestaurants:(CLLocationCoordinate2D)coordinate withFilters:(NSMutableArray *) filters;
+- (void)getRestaurants:(CLLocationCoordinate2D)coordinate withFilters:(NSString *) filters;
 - (void)createRestaurant:(NSDictionary *) restaurantObject;
 - (void) registerUser: (NSString *) username;
 - (void) getRestaurantsByUser: (User *) userObject;

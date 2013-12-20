@@ -41,15 +41,23 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    locationManager = [[CLLocationManager alloc] init];
+    locationManager = [LocationManagerObserver sharedInstance];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
+    
+    locationManager.locationManager.distanceFilter = kCLDistanceFilterNone;
     [locationManager startUpdatingLocation];
+    
+    manager = [[CreateTasteManager alloc] init];
+    manager.communicator = [[ TasteApiCommunicator alloc] init];
+    manager.communicator.delegate = manager;
+    manager.delegate = self.delegate;
 
     
 
 }
+
+
 
 
 /*
@@ -98,10 +106,7 @@
         
         
         
-        manager = [[CreateTasteManager alloc] init];
-        manager.communicator = [[ TasteApiCommunicator alloc] init];
-        manager.communicator.delegate = manager;
-        manager.delegate = self;
+        
         
         // change save button to disabled
         [saveButton setEnabled:NO];
@@ -161,26 +166,8 @@
     }
     
     
-    
-    
-    
 }
 
--(void) errorDuringSavingTaste:(NSError *)error {
-    // we can't! it's disabled
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops! There's a problem"
-                                                    message:@"There was an error during saving of your taste, try again later!"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"I'll try later"
-                                          otherButtonTitles:nil];
-    [alert show];
-
-}
-
--(void) savingTasteSuccess:(Restaurant *)restaurantObject {
-    [[NotificationManager alloc] showSuccessNotification:@"Taste is with success created."];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 
 @end

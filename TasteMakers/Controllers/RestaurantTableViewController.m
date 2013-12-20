@@ -155,7 +155,7 @@
     self.modalPresentationStyle = UIModalPresentationCurrentContext;
     [self presentViewController:infoViewController animated:NO completion:nil];
     
-    [infoViewController startAnimatingObjects];
+    
    
 
     

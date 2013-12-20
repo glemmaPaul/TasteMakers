@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  IntroViewController.h
 //  TasteMakers
 //
 //  Created by Paul Oostenrijk on 14-12-13.

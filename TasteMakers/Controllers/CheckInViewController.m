@@ -50,10 +50,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     // we set the accuracy a little better, because we went to check in really specific
-    locationManager = [[CLLocationManager alloc] init];
+    locationManager = [[LocationManagerObserver alloc] init];
     locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
     [locationManager startUpdatingLocation];
     
     // setting up manager
@@ -63,56 +62,23 @@
     manager.communicator.delegate = manager;
 }
 
-- (void)locationManager:(CLLocationManager *)currentLocationManager
-    didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+- (void) locationUpdatedWithDesiredAccuracy:(CLLocation *)location {
+    // we have a measurement that meets our requirements, so we can stop updating the location
+    //
+    // IMPORTANT!!! Minimize power usage by stopping the location manager as soon as possible.
+    //
+    [locationManager stopUpdatingLocation];
+    
+    CLLocationCoordinate2D coord = {
+        .latitude = location.coordinate.latitude,
+        .longitude = location.coordinate.longitude};
     
     
-    // test the age of the location measurement to determine if the measurement is cached
-    // in most cases you will not want to rely on cached measurements
-    NSTimeInterval locationAge = -[newLocation.timestamp timeIntervalSinceNow];
+    [manager getRestaurantsNearby:coord];
     
-    if (locationAge > 5.0) return;
-    
-    // test that the horizontal accuracy does not indicate an invalid measurement
-    if (newLocation.horizontalAccuracy < 0) return;
-    
-    // test the measurement to see if it is more accurate than the previous measurement
-    if (bestEffortAtLocation == nil || bestEffortAtLocation.horizontalAccuracy > newLocation.horizontalAccuracy) {
-        // store the location as the "best effort"
-        self.bestEffortAtLocation = newLocation;
-        
-        // test the measurement to see if it meets the desired accuracy
-        //
-        // IMPORTANT!!! kCLLocationAccuracyBest should not be used for comparison with location coordinate or altitidue
-        // accuracy because it is a negative value. Instead, compare against some predetermined "real" measure of
-        // acceptable accuracy, or depend on the timeout to stop updating. This sample depends on the timeout.
-        //
-        if (newLocation.horizontalAccuracy <= locationManager.desiredAccuracy) {
-            // we have a measurement that meets our requirements, so we can stop updating the location
-            //
-            // IMPORTANT!!! Minimize power usage by stopping the location manager as soon as possible.
-            //
-            [locationManager stopUpdatingLocation];
-            
-            CLLocationCoordinate2D coord = {
-                .latitude = newLocation.coordinate.latitude,
-                .longitude = newLocation.coordinate.longitude};
-            
-            // setting up manager
-            manager = [[CheckInManager alloc] init];
-            manager.communicator = [[TasteApiCommunicator alloc] init];
-            manager.delegate = self;
-            manager.communicator.delegate = manager;
-            
-            [manager getRestaurantsNearby:coord];
-            
-            
-            
-            // we can also cancel our previous performSelector:withObject:afterDelay: - it's no longer necessary
-            [NSObject cancelPreviousPerformRequestsWithTarget:self];
-        }
-    }
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

@@ -19,25 +19,10 @@
 @implementation TasteApiCommunicator
 
 
-- (void)getRestaurants:(CLLocationCoordinate2D) coordinate withFilters:(NSMutableArray *) filters
+- (void)getRestaurants:(CLLocationCoordinate2D) coordinate withFilters:(NSString *) filters
 {
     
-    NSMutableArray *_filterArray = [[NSMutableArray alloc] init];
-    
-    for (Filter *_filter in filters) {
-        [_filterArray addObject:_filter.name];
-    }
-    
-    NSDictionary *parameters = @{@"filters": _filterArray};
-    
-    
-    
-    NSLog(@"%@", parameters);
-    
-    
-    [self executePostToServer:[NSString stringWithFormat:@"%@/restaurant/?latitude=%f&longitude=%f", APIRootURL, coordinate.latitude, coordinate.longitude]  withParameters:parameters];
-    
-    
+    [self executeGetToServer:[NSString stringWithFormat:@"%@/restaurant/?filters=%@?latitude=%f&longitude=%f", APIRootURL, filters, coordinate.latitude, coordinate.longitude] ];
    
 }
 

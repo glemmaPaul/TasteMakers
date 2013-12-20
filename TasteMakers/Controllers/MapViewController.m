@@ -107,75 +107,6 @@
     [locationManagerObserver stopUpdatingLocation];
 }
 
-- (IBAction)detailsAnnotationPanned:(UIPanGestureRecognizer *)GesturePanRecognizer {
-    CGPoint positionPan = [GesturePanRecognizer locationInView:self.view];
-    
-    // calculate the dirrefence in points between the finger and the center of the details bar
-    CGPoint positionDetailsPan = [GesturePanRecognizer locationInView:detailsView];
-    
-    
-    if (GesturePanRecognizer.state == UIGestureRecognizerStateEnded) {
-        
-        
-        
-        
-        positionPan.y = self.view.center.y;
-        
-        
-        
-        [CATransaction begin];
-        CGPoint toTarget = self.view.center;
-        
-        
-        if (positionPan.y < self.view.center.x) {
-            CGPoint toTarget = self.view.center;
-            NSLog(@"show details");
-        }
-        else {
-            NSLog(@"Hide details");
-            //animate to top
-            //CGPoint toTarget;
-            
-            // we don't want the details view to be hidden under the tabbar
-            toTarget.x = restaurantMapView.frame.size.height;
-            toTarget.x += detailsView.frame.size.height / 2;
-            toTarget.x -= self.tabBarController.tabBar.frame.size.height;
-            
-            
-        }
-        
-        positionPan.y += (detailsView.frame.size.height / 2);
-        
-        [CATransaction setValue:[NSNumber numberWithFloat:0.750] forKey:kCATransactionAnimationDuration];
-        
-        CAAnimation *detailsViewAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"
-                                                                         function:ExponentialEaseOut
-                                                                        fromPoint:positionPan
-                                                                          toPoint:toTarget];
-        
-        
-        [CATransaction setCompletionBlock:^{
-            //[self dismissViewControllerAnimated:YES completion:nil];
-        }];
-        [detailsViewAnimation setDelegate:self];
-        CALayer *detailsLayer = [detailsView layer];
-        [detailsLayer addAnimation:detailsViewAnimation forKey:@"position"];
-        
-        [CATransaction setCompletionBlock:^{
-            NSLog(@"Done");
-        }];
-        
-        [CATransaction commit];
-       
-        [detailsView setCenter:toTarget];
-
-    }
-    else {
-        detailsView.frame = CGRectMake(detailsView.frame.origin.x, positionPan.y, detailsView.frame.size.width, detailsView.frame.size.height);
-    }
-    
-}
-
 -(void)assignPlacemarkers {
     
    
@@ -370,7 +301,7 @@
 }
 
 - (void) didReceiveRestaurants:(NSArray *)_restaurants {
-    NSLog(@"cell may be filled");
+    
     self.restaurants = _restaurants;
     
     [self hideContainerView];
@@ -464,7 +395,7 @@
         [infoViewController setDelegate:self];
         [[RestaurantDetailsManager sharedInstance] setRestaurant:_restaurant];
         
-        infoViewController.view.backgroundColor = [UIColor clearColor];
+        infoViewController.view.backgroundColor = [UIColor whiteColor];
         self.modalPresentationStyle = UIModalPresentationCurrentContext;
         [self.parentViewController presentViewController:infoViewController animated:YES completion:nil];
        

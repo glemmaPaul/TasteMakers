@@ -9,12 +9,36 @@
 #import "TasteRestaurantsManager.h"
 #import "RestaurantCollection.h"
 #import <CoreLocation/CoreLocation.h>
+#import "Filter.h"
 
 @implementation TasteRestaurantsManager
 
-- (void)fetchRestaurants:(CLLocationCoordinate2D) coordinate withFilter:(NSMutableArray *) filter
+- (void)fetchRestaurants:(CLLocationCoordinate2D) coordinate withFilter:(NSMutableArray *) filters
 {
-    [self.communicator getRestaurants:coordinate withFilters:filter];
+    
+    NSString *filterQuery = @"";
+    
+    
+    
+    if ([filters count] > 0) {
+        
+        // create the filters id in a comma seperate list
+        NSMutableArray *filterArray = [NSMutableArray alloc];
+    
+        for (Filter *_filter  in filters) {
+            [filterArray addObject:_filter.identifier];
+        }
+    
+        filterQuery = [filterArray componentsJoinedByString:@","];
+    }
+    
+   
+    
+   
+    
+    
+    
+    [self.communicator getRestaurants:coordinate withFilters:filterQuery ];
 }
 
 

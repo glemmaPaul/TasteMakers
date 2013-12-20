@@ -12,6 +12,7 @@
 #import "User.h"
 #import "RestaurantDetailsManager.h"
 #import "DetailsRestaurantViewController.h"
+#import "NewTasteViewController.h"
 
 @interface MyTastesTableViewController ()
 
@@ -19,7 +20,7 @@
 
 @implementation MyTastesTableViewController
 
-@synthesize manager, restaurants, userPreferences, MyTastersTableView;
+@synthesize manager, restaurants, userPreferences, MyTastersTableView, notificationManager, createTasteViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) didReceiveRestaurants:(NSArray *)restaurantsArray {
+- (void) didReceiveRestaurants:(NSMutableArray *)restaurantsArray {
     NSLog(@"I have retrieved them");
     self.restaurants = restaurantsArray;
     [MyTastersTableView reloadData];
@@ -74,6 +75,14 @@
 
 }
 
+- (IBAction)addNewTasteButtonPressed:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    createTasteViewController = (NewTasteViewController *)[storyboard instantiateViewControllerWithIdentifier:@"NewTasteView"];
+    [createTasteViewController setDelegate:self];
+    
+    [self presentViewController:createTasteViewController animated:YES completion:nil];
+    
+}
 
 - (void) refreshMyTastersTableView {
     [manager getMyRestaurants:[[UserPreferences alloc] getUserObject]];
@@ -112,6 +121,18 @@
 
 }
 
+- (void) errorDuringSavingTaste:(NSError *)error {
+    [notificationManager showErrorNotification:[[NSString alloc] initWithFormat:@"Error during save: %@", [error localizedDescription]]];
+}
+
+- (void) savingTasteSuccess:(Restaurant *)restaurantObject {
+    
+    // add it to the list
+    [createTasteViewController dismissViewControllerAnimated:YES completion:NO];
+    [notificationManager showSuccessNotification:@"Taste created successfully"];
+    [self.restaurants addObject:restaurantObject];
+    [MyTastersTableView reloadData];
+}
 
 
 @end

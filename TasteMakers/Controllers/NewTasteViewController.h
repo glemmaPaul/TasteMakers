@@ -11,9 +11,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CreateTasteDelegate.h"
 #import "FilterViewController.h"
+#import "LocationManagerDelegate.h"
+#import "LocationManagerObserver.h"
 
-@interface NewTasteViewController : UIViewController <CLLocationManagerDelegate, CreateTasteDelegate, FilterViewControllerDelegate> {
-    CLLocationManager *locationManager;
+@interface NewTasteViewController : UIViewController <LocationManagerDelegate, CreateTasteDelegate, FilterViewControllerDelegate> {
+    LocationManagerObserver *locationManager;
     UIActivityIndicatorView *activityView;
     UIView *loadingView;
     UILabel *loadingLabel;
@@ -25,5 +27,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextField;
 @property NSMutableArray *selectedFilters;
+@property id<CreateTasteDelegate> delegate;
 
 @end
