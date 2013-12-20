@@ -216,9 +216,6 @@
     
     
     
-    [CATransaction setCompletionBlock:^{
-        NSLog(@"Done");
-    }];
     
     
     [redViewAnimation setDelegate:self];
@@ -272,16 +269,12 @@
 
 - (void) hideContainerView {
     
-    NSLog(@"Hiding container");
-    
-    
     [UIView animateWithDuration:0.3f delay:0.1f options:0 animations:^{
         loadingContainer.frame = CGRectMake(loadingContainer.frame.origin.x, -100, loadingContainer.bounds.size.width, loadingContainer.bounds.size.height );
         
         
     }completion:^(BOOL finished) {
         [loadingContainer removeFromSuperview];
-        NSLog(@"Container view is gone");
     }];
 
 }
