@@ -9,7 +9,8 @@
 #import "NotificationView.h"
 
 @implementation NotificationView
-@synthesize notificationMessage;
+
+@synthesize notificationMessage, view;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

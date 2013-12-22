@@ -37,7 +37,7 @@
     [manager setDelegate:self];
     [manager getFilters];
     
-    
+    selectedFilters = [[NSMutableArray alloc]init];
     
 }
 
@@ -77,8 +77,8 @@
 
 
 - (IBAction)doneButtonClicked:(id)sender {
-    
-    [self.delegate filterViewDismissedWithSelectedFilters:selectedFilters fromViewController:self];
+    NSLog(@"%@", selectedFilters);
+    [self.delegate filterViewDismissedWithSelectedFilters:self.selectedFilters fromViewController:self];
     
 }
 
@@ -89,7 +89,7 @@
     
     // add the filter to the selected filters
     Filter *filter = [self.filters objectAtIndex:indexPath.row];
-    [selectedFilters addObject:filter];
+    [self.selectedFilters addObject:filter];
     
     
 
@@ -103,7 +103,7 @@
     
     // add the filter to the selected filters
     Filter *filter = [self.filters objectAtIndex:indexPath.row];
-    [selectedFilters removeObject:filter];
+    [self.selectedFilters removeObject:filter];
 }
 
 

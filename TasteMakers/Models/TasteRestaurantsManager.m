@@ -18,12 +18,9 @@
     
     NSString *filterQuery = @"";
     
-    
-    
     if ([filters count] > 0) {
-        
         // create the filters id in a comma seperate list
-        NSMutableArray *filterArray = [NSMutableArray alloc];
+        NSMutableArray *filterArray = [[NSMutableArray alloc] init];
     
         for (Filter *_filter  in filters) {
             [filterArray addObject:_filter.identifier];
@@ -31,11 +28,6 @@
     
         filterQuery = [filterArray componentsJoinedByString:@","];
     }
-    
-   
-    
-   
-    
     
     
     [self.communicator getRestaurants:coordinate withFilters:filterQuery ];

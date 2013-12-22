@@ -11,7 +11,6 @@
 
 @implementation RestaurantDetailsManager
 @synthesize currentRestaurant;
-@synthesize viewMode;
 
 + (id)sharedInstance {
     static RestaurantDetailsManager *sharedInstance = nil;

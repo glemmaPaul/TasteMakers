@@ -137,6 +137,7 @@
     [_twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
         
         [userManager registerUser:username];
+        [self openTabBarController];
         
         
         
@@ -172,6 +173,8 @@
     [_twitter postAccessTokenRequestWithPIN:verifier successBlock:^(NSString *oauthToken, NSString *oauthTokenSecret, NSString *userID, NSString *screenName) {
         
         [userManager registerUser:screenName];
+        
+        [self openTabBarController];
         
     } errorBlock:^(NSError *error) {
         

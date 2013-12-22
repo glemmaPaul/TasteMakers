@@ -19,7 +19,7 @@
 @end
 
 @implementation ReviewsChildPageViewController
-@synthesize restaurant, reviews, reviewsTableView, NewReviewOpen, TopBarViewNewReview, ViewNewReview, NewReviewTextView, animatedDistance, NewReviewSaveButton;
+@synthesize restaurant, reviews, reviewsTableView, NewReviewOpen, TopBarViewNewReview, ViewNewReview, NewReviewTextView, animatedDistance, NewReviewSaveButton, firstReviewImage;
 
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
@@ -54,9 +54,13 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     if ([reviews count] == 0) {
         [reviewsTableView setHidden:YES];
-        
+        [firstReviewImage setHidden:NO];
         // create a image that shows how to create a new review
         
+    }
+    else {
+        [firstReviewImage setHidden:YES];
+        [reviewsTableView setHidden:NO];
     }
     [NewReviewSaveButton setHidden:YES];
     [NewReviewSaveButton setEnabled:NO];
@@ -215,6 +219,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [self.reviews addObject:review];
     self.restaurant.reviews = self.reviews;
     [[RestaurantDetailsManager sharedInstance] setRestaurant:self.restaurant];
+    
+    [reviewsTableView setHidden:NO];
+    [firstReviewImage setHidden:YES];
     [reviewsTableView reloadData];
     
     [self closeNewReviewView:ViewNewReview.center];
@@ -314,62 +321,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 -(void) viewDidAppear:(BOOL)animated {
     
-    
-    
     [super viewDidAppear:animated];
 }
 
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

@@ -8,13 +8,14 @@
 
 #import "DetailsChildPageViewController.h"
 #import "RestaurantDetailsManager.h"
+#import "Filter.h"
 
 @interface DetailsChildPageViewController ()
 
 @end
 
 @implementation DetailsChildPageViewController
-@synthesize restaurant, descriptionTextView, titleTextLabel;
+@synthesize restaurant, descriptionTextView, titleTextLabel, filtersTextLabel, avatarImageLabel, tasteByTextLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +35,25 @@
     NSLog(@"%@", restaurant.description);
     [titleTextLabel setText:restaurant.title];
     [descriptionTextView setText:restaurant.description];
+    
+    [tasteByTextLabel setText:[[NSString alloc] initWithFormat:@"Taste by @%@", restaurant.user.username]];
+    
+    if ([restaurant.filters count] > 0) {
+        // first we set up a mutable array. To add the names from the filters to it
+        NSMutableArray *_filterTextArray = [[NSMutableArray alloc] init];
+        
+        for (Filter *_filterObject in restaurant.filters) {
+            [_filterTextArray addObject:_filterObject.name];
+        }
+        [filtersTextLabel setText:[[NSString alloc] initWithFormat:@"Filters: %@", [_filterTextArray componentsJoinedByString:@","]]];
+        
+    }
+    else {
+        [filtersTextLabel setHidden:YES];
+    }
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

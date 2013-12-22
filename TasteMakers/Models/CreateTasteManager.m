@@ -9,6 +9,8 @@
 #import "CreateTasteManager.h"
 #import "RestaurantCollection.h"
 #import "Restaurant.h"
+#import "Filter.h"
+
 @implementation CreateTasteManager
 @synthesize communicator;
 - (void) createRestaurant:(Restaurant *)restaurantObject {
@@ -20,6 +22,19 @@
     [restaurantData setValue:[NSNumber numberWithFloat:restaurantObject.location.latitude] forKey:@"latitude"];
     [restaurantData setValue:[NSNumber numberWithFloat:restaurantObject.location.longitude] forKey:@"longitude"];
     [restaurantData setValue:restaurantObject.user.username forKey:@"username"];
+    
+    NSMutableDictionary *_filters = [[NSMutableDictionary alloc] init];
+    if ([restaurantObject.filters count] > 0) {
+        
+        
+        for (Filter *_filter in restaurantObject.filters) {
+            [_filters setValue:_filter.name forKey:[_filter.identifier stringValue]];
+        }
+    }
+    
+    [restaurantData setValue:_filters forKey:@"filters"];
+    
+    NSLog(@"%@", restaurantData);
 
     [communicator createRestaurant:restaurantData];
 }

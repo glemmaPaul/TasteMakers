@@ -43,7 +43,7 @@
         
         Filter *_filter = [[Filter alloc] init];
         _filter.name = [filterDict valueForKey:@"name"];
-        _filter.identifier = [filterDict valueForKey:@"identifier"];
+        _filter.identifier = [filterDict valueForKey:@"id"];
         
         [cachedFilters addObject:_filter];
         

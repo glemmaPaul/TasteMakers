@@ -43,10 +43,6 @@
 		5B85C7AE185F2C880087C10D /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85C7AD185F2C880087C10D /* CheckInViewController.m */; };
 		5B85C7B1185F311A0087C10D /* MyTasteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85C7B0185F311A0087C10D /* MyTasteManager.m */; };
 		5B85C7B3185F3D140087C10D /* app_icon_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B85C7B2185F3D140087C10D /* app_icon_tabbar.png */; };
-		5B85C7B9185F4CD00087C10D /* directions.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B85C7B8185F4CD00087C10D /* directions.png */; };
-		5B85C7BD185F4E040087C10D /* directions.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B85C7BA185F4E040087C10D /* directions.png */; };
-		5B85C7BE185F4E040087C10D /* hide.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B85C7BB185F4E040087C10D /* hide.png */; };
-		5B85C7BF185F4E040087C10D /* reviews.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B85C7BC185F4E040087C10D /* reviews.png */; };
 		5B85C7C3185F6C2A0087C10D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B85C7C2185F6C2A0087C10D /* libsqlite3.dylib */; };
 		5B85C7C6185F7CDB0087C10D /* CheckInManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85C7C5185F7CDB0087C10D /* CheckInManager.m */; };
 		5B85C7CA185F84B40087C10D /* MyTastesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85C7C9185F84B40087C10D /* MyTastesTableViewController.m */; };
@@ -61,6 +57,10 @@
 		5B912B36186094850070530E /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B912B34186094850070530E /* FilterViewController.m */; };
 		5B912B37186094860070530E /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B912B35186094850070530E /* FilterViewController.xib */; };
 		5B912B391860B6B70070530E /* details_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B912B381860B6B70070530E /* details_button.png */; };
+		5B98C0041866107400AA3BF3 /* IQButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B98C0021866107400AA3BF3 /* IQButtonBarArrowLeft@2x.png */; };
+		5B98C0051866107400AA3BF3 /* IQButtonBarArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B98C0031866107400AA3BF3 /* IQButtonBarArrowRight@2x.png */; };
+		5B98C008186610BC00AA3BF3 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B98C007186610BC00AA3BF3 /* IQKeyboardManager.m */; };
+		5B98C00A1866FABD00AA3BF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B98C0091866FABD00AA3BF3 /* Images.xcassets */; };
 		5BA49EDC1863782F00F03076 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA49EDB1863782F00F03076 /* SettingsViewController.m */; };
 		5BA49EDF186398FC00F03076 /* FilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA49EDE186398FC00F03076 /* FilterManager.m */; };
 		5BA66189185CD18D00DA639F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA66188185CD18D00DA639F /* Foundation.framework */; };
@@ -71,7 +71,6 @@
 		5BA66199185CD18D00DA639F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA66198185CD18D00DA639F /* AppDelegate.m */; };
 		5BA6619C185CD18D00DA639F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6619A185CD18D00DA639F /* Main.storyboard */; };
 		5BA6619F185CD18D00DA639F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6619E185CD18D00DA639F /* ViewController.m */; };
-		5BA661A1185CD18D00DA639F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA661A0185CD18D00DA639F /* Images.xcassets */; };
 		5BA661A8185CD18D00DA639F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA661A7185CD18D00DA639F /* XCTest.framework */; };
 		5BA661A9185CD18D00DA639F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA66188185CD18D00DA639F /* Foundation.framework */; };
 		5BA661AA185CD18D00DA639F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA6618C185CD18D00DA639F /* UIKit.framework */; };
@@ -176,10 +175,6 @@
 		5B85C7AF185F311A0087C10D /* MyTasteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTasteManager.h; path = Models/MyTasteManager.h; sourceTree = "<group>"; };
 		5B85C7B0185F311A0087C10D /* MyTasteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTasteManager.m; path = Models/MyTasteManager.m; sourceTree = "<group>"; };
 		5B85C7B2185F3D140087C10D /* app_icon_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_tabbar.png; path = Images/app_icon_tabbar.png; sourceTree = "<group>"; };
-		5B85C7B8185F4CD00087C10D /* directions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = directions.png; path = Images/icons/directions.png; sourceTree = "<group>"; };
-		5B85C7BA185F4E040087C10D /* directions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = directions.png; path = Images/icons/directions.png; sourceTree = "<group>"; };
-		5B85C7BB185F4E040087C10D /* hide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hide.png; path = Images/icons/hide.png; sourceTree = "<group>"; };
-		5B85C7BC185F4E040087C10D /* reviews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reviews.png; path = Images/icons/reviews.png; sourceTree = "<group>"; };
 		5B85C7C1185F5AB00087C10D /* CreateTasteDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CreateTasteDelegate.h; path = Models/CreateTasteDelegate.h; sourceTree = "<group>"; };
 		5B85C7C2185F6C2A0087C10D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5B85C7C4185F7CDB0087C10D /* CheckInManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckInManager.h; path = Models/CheckInManager.h; sourceTree = "<group>"; };
@@ -206,6 +201,11 @@
 		5B912B34186094850070530E /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterViewController.m; path = Controllers/FilterViewController.m; sourceTree = "<group>"; };
 		5B912B35186094850070530E /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilterViewController.xib; path = Controllers/FilterViewController.xib; sourceTree = "<group>"; };
 		5B912B381860B6B70070530E /* details_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = details_button.png; path = Images/details_button.png; sourceTree = "<group>"; };
+		5B98C0021866107400AA3BF3 /* IQButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IQButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
+		5B98C0031866107400AA3BF3 /* IQButtonBarArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IQButtonBarArrowRight@2x.png"; sourceTree = "<group>"; };
+		5B98C006186610BC00AA3BF3 /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		5B98C007186610BC00AA3BF3 /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		5B98C0091866FABD00AA3BF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5BA49EDA1863782F00F03076 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Controllers/SettingsViewController.h; sourceTree = "<group>"; };
 		5BA49EDB1863782F00F03076 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Controllers/SettingsViewController.m; sourceTree = "<group>"; };
 		5BA49EDD186398FC00F03076 /* FilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterManager.h; path = Models/FilterManager.h; sourceTree = "<group>"; };
@@ -224,7 +224,6 @@
 		5BA6619B185CD18D00DA639F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BA6619D185CD18D00DA639F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5BA6619E185CD18D00DA639F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5BA661A0185CD18D00DA639F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5BA661A6185CD18D00DA639F /* TasteMakersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteMakersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA661A7185CD18D00DA639F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5BA661AF185CD18D00DA639F /* TasteMakersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TasteMakersTests-Info.plist"; sourceTree = "<group>"; };
@@ -381,10 +380,6 @@
 			children = (
 				5B912B381860B6B70070530E /* details_button.png */,
 				5B85C7D4185F9DC00087C10D /* logo_start.png */,
-				5B85C7BA185F4E040087C10D /* directions.png */,
-				5B85C7BB185F4E040087C10D /* hide.png */,
-				5B85C7BC185F4E040087C10D /* reviews.png */,
-				5B85C7B8185F4CD00087C10D /* directions.png */,
 				5B85C7B2185F3D140087C10D /* app_icon_tabbar.png */,
 				5B85C7D2185F9BBA0087C10D /* restaurant_icon.png */,
 				5B85C711185E0CB00087C10D /* close_button.png */,
@@ -422,6 +417,7 @@
 		5B85C721185E66D30087C10D /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5B98C0011866107400AA3BF3 /* IQKeyBoardManager */,
 				5B85C7CB185F9A750087C10D /* AHEasing */,
 				5B15FD78185CF72200857F1A /* STTwitter */,
 			);
@@ -525,6 +521,17 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		5B98C0011866107400AA3BF3 /* IQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				5B98C006186610BC00AA3BF3 /* IQKeyboardManager.h */,
+				5B98C007186610BC00AA3BF3 /* IQKeyboardManager.m */,
+				5B98C0021866107400AA3BF3 /* IQButtonBarArrowLeft@2x.png */,
+				5B98C0031866107400AA3BF3 /* IQButtonBarArrowRight@2x.png */,
+			);
+			path = IQKeyBoardManager;
+			sourceTree = "<group>";
+		};
 		5BA6617C185CD18D00DA639F = {
 			isa = PBXGroup;
 			children = (
@@ -570,8 +577,8 @@
 				5BA66197185CD18D00DA639F /* AppDelegate.h */,
 				5BA66198185CD18D00DA639F /* AppDelegate.m */,
 				5BA6619A185CD18D00DA639F /* Main.storyboard */,
-				5BA661A0185CD18D00DA639F /* Images.xcassets */,
 				5BE5810A1861F65400A54D96 /* TabBarImages.xcassets */,
+				5B98C0091866FABD00AA3BF3 /* Images.xcassets */,
 				5B15FDAC185D19A800857F1A /* thumbnail_preview.png */,
 				5BA6618F185CD18D00DA639F /* Supporting Files */,
 			);
@@ -685,23 +692,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B98C0051866107400AA3BF3 /* IQButtonBarArrowRight@2x.png in Resources */,
 				5B85C712185E0CB00087C10D /* close_button.png in Resources */,
-				5B85C7BE185F4E040087C10D /* hide.png in Resources */,
-				5BA661A1185CD18D00DA639F /* Images.xcassets in Resources */,
 				5BE5810B1861F65400A54D96 /* TabBarImages.xcassets in Resources */,
-				5B85C7BD185F4E040087C10D /* directions.png in Resources */,
 				5B912B37186094860070530E /* FilterViewController.xib in Resources */,
 				5B85C7D3185F9BBA0087C10D /* restaurant_icon.png in Resources */,
-				5B85C7BF185F4E040087C10D /* reviews.png in Resources */,
 				5B15FDAD185D19A800857F1A /* thumbnail_preview.png in Resources */,
 				5B85C7D5185F9DC00087C10D /* logo_start.png in Resources */,
 				5B85C7B3185F3D140087C10D /* app_icon_tabbar.png in Resources */,
-				5B85C7B9185F4CD00087C10D /* directions.png in Resources */,
 				5BA66193185CD18D00DA639F /* InfoPlist.strings in Resources */,
 				5B912B391860B6B70070530E /* details_button.png in Resources */,
 				5BE5810F1861FAF300A54D96 /* AboutDeveloperView.xib in Resources */,
+				5B98C00A1866FABD00AA3BF3 /* Images.xcassets in Resources */,
 				5BA6619C185CD18D00DA639F /* Main.storyboard in Resources */,
 				5BE580FD1861E6A900A54D96 /* NotificationView.xib in Resources */,
+				5B98C0041866107400AA3BF3 /* IQButtonBarArrowLeft@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +773,7 @@
 				5B15FD93185CF72200857F1A /* NSString+STTwitter.m in Sources */,
 				5B85C720185E65BF0087C10D /* CreateTasteManager.m in Sources */,
 				5B85C719185E30C40087C10D /* Review.m in Sources */,
+				5B98C008186610BC00AA3BF3 /* IQKeyboardManager.m in Sources */,
 				5B15FD99185CF72200857F1A /* STTwitterOS.m in Sources */,
 				5B85C7B1185F311A0087C10D /* MyTasteManager.m in Sources */,
 				5B15FD9A185CF72200857F1A /* BAVPlistNode.m in Sources */,

@@ -22,13 +22,12 @@
 - (void)getRestaurants:(CLLocationCoordinate2D) coordinate withFilters:(NSString *) filters
 {
     
-    [self executeGetToServer:[NSString stringWithFormat:@"%@/restaurant/?filters=%@?latitude=%f&longitude=%f", APIRootURL, filters, coordinate.latitude, coordinate.longitude] ];
+    [self executeGetToServer:[NSString stringWithFormat:@"%@/restaurant/?filters=%@&latitude=%f&longitude=%f", APIRootURL, filters, coordinate.latitude, coordinate.longitude] ];
    
 }
 
 - (void)createRestaurant: (NSDictionary *)restaurantObject
 {
-    NSLog(@"Create restaurant");
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = restaurantObject;
     

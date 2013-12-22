@@ -9,12 +9,21 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "UserPreferences.h"
+#import "IQKeyboardManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [[IQKeyboardManager sharedManager] setEnable:YES];
+    [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:15.0f];
+    
     BOOL applicationDatabase = [[UserPreferences alloc] initializeDatabase];
+    
+    if (!applicationDatabase) {
+        NSLog(@"Database initialization failed");
+    }
     
     // Override point for customization after application launch.
     return YES;

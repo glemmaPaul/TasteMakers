@@ -11,11 +11,14 @@
 #import "FilterManager.h"
 #import "FilterManagerDelegate.h"
 
-@interface FilterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, FilterManagerDelegate>
+@interface FilterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, FilterManagerDelegate> {
+    NSMutableArray *selectedFilters;
+}
 @property (weak, nonatomic) IBOutlet UITableView *filterTableView;
 @property (retain, nonatomic) id<FilterViewControllerDelegate> delegate;
 -(void) setDelegate:(id<FilterViewControllerDelegate>)delegate;
-@property NSMutableArray *selectedFilters;
+@property (nonatomic,retain) NSMutableArray *selectedFilters;
 @property NSMutableArray *filters;
 @property FilterManager *manager;
+
 @end

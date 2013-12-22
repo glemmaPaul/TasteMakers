@@ -20,5 +20,6 @@
 @property CLLocationCoordinate2D location;
 @property RestaurantPlacemark *placemark;
 @property BOOL hided;
+@property NSMutableArray *filters;
 
 @end

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TasteMakers/Models/RestaurantCollection.m"
-            timestampString = "409183014.446068"
+            timestampString = "409308077.24838"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "+fetchRestaurants:error:"
             landmarkType = "5">
          </BreakpointContent>

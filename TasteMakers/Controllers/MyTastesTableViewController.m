@@ -42,8 +42,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    NSLog(@"%@", [userPreferences getUserObject]);
-    
+
     manager = [[MyTasteManager alloc] init];
     manager.communicator = [[TasteApiCommunicator alloc] init];
     manager.communicator.delegate = manager;
@@ -59,7 +58,6 @@
 }
 
 - (void) didReceiveRestaurants:(NSMutableArray *)restaurantsArray {
-    NSLog(@"I have retrieved them");
     self.restaurants = restaurantsArray;
     [MyTastersTableView reloadData];
     

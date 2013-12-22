@@ -94,8 +94,7 @@
     [self checkLocationSetting];
     
     if (CLLocationCoordinate2DIsValid(currentLocation)) {
-        
-        
+    
         Restaurant *restaurant = [[Restaurant alloc] init];
         restaurant.title = nameTextField.text;
         restaurant.description = descriptionTextField.text;
@@ -104,14 +103,10 @@
         UserPreferences *_userPreferences = [[UserPreferences alloc] init];
         restaurant.user = [_userPreferences getUserObject];
         
-        
-        
-        
+        restaurant.filters = selectedFilters;
         
         // change save button to disabled
         [saveButton setEnabled:NO];
-        
-        
         
         [manager createRestaurant:restaurant];
         
@@ -143,7 +138,7 @@
 }
 
 - (void) filterViewDismissedWithSelectedFilters:(NSMutableArray *)filters fromViewController:(UIViewController *)viewController {
-    NSLog(@"Filters are in");
+    
     selectedFilters = filters;
     
     [viewController dismissViewControllerAnimated:YES completion:nil];

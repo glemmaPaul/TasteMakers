@@ -11,5 +11,6 @@
 @interface User : NSObject
 @property NSString *username;
 @property NSNumber *identifier;
+@property NSString *avatarPath;
 
 @end

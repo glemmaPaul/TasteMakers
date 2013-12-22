@@ -15,6 +15,5 @@
 +(id) sharedInstance;
 -(Restaurant *) getRestaurant;
 - (void) setRestaurant:(Restaurant *)restaurantObject;
-- (NSString *) getViewMode;
-@property NSString *viewMode;
+
 @end;

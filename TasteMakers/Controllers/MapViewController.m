@@ -126,6 +126,7 @@
 
 - (void) filterViewDismissedWithSelectedFilters:(NSMutableArray *)filters fromViewController:(UIViewController *)viewController {
     
+    [self removePlacemarkers];
     
     [restaurantManager fetchRestaurants:lastLocation withFilter:filters];
     
@@ -139,16 +140,19 @@
     FilterViewController *filterViewController = (FilterViewController *)[storyboard instantiateViewControllerWithIdentifier:@"filterView"];
     
     UIView *filterView = filterViewController.view;
+    filterView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     // set the view to -50, because we want some padding
-    filterView.frame = CGRectMake(-filterView.frame.size.width, filterView.frame.origin.y, filterView.frame.size.width -50,  filterView.frame.size.height);
+    filterView.frame = CGRectMake(- (self.view.bounds.size.width +300), filterView.frame.origin.y, self.view.bounds.size.width-50,  self.view.bounds.size.height);
     
-    // create the green border on the right
-    CALayer *rightBorder = [CALayer layer];
-    rightBorder.frame = CGRectMake(filterView.frame.size.width - 2, 0.0f, 2.0f, filterView.frame.size.height);
-    rightBorder.backgroundColor = [[UIColor alloc] initWithRed:20.0f green:10.0f blue:0.0f alpha:1].CGColor;
-    [filterView.layer addSublayer:rightBorder];
+   
     [self.view addSubview:filterViewController.view];
     [self addChildViewController:filterViewController];
+    // create the green border on the right
+    UIView *rightBorder = [[UIView alloc] init];
+    rightBorder.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+    rightBorder.frame = CGRectMake(filterView.frame.size.width - 2, 0.0f, 2.0f, filterView.frame.size.height);
+    rightBorder.backgroundColor = [[UIColor alloc] initWithRed:134.0f/255.0f green:196.0f/255.0f blue:65.0f/255.0f alpha:1.0f];
+    [filterView addSubview:rightBorder];
     
     //Create the black alpha to hide the maps
     
@@ -415,9 +419,7 @@
     
 }
 
--(void) detailsButtonPressed {
-    NSLog(@"Pressed");
-}
+
 
 
 

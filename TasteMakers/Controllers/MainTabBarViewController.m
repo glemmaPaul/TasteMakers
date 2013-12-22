@@ -40,11 +40,11 @@
 }
 
 - (void) animateGreenView {
-    NSLog(@"Green field");
+    //NSLog(@"Green field");
 }
 
 -(void) animationOnModalViewController:(NSString *)idenitifier {
-    NSLog(@"Testing");
+    //NSLog(@"Testing");
 }
 
 @end

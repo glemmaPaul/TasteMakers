@@ -140,11 +140,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void) setMode:(NSString *) mode  {
-    if ([mode  isEqual: @"MAP"]) {
-        self.mode = mode;
-    }
-}
+
 
 CGRect screenBoundsDependOnOrientation()
 {

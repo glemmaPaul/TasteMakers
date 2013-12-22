@@ -14,7 +14,7 @@
 #import "LocationManagerDelegate.h"
 #import "LocationManagerObserver.h"
 
-@interface NewTasteViewController : UIViewController <LocationManagerDelegate, CreateTasteDelegate, FilterViewControllerDelegate> {
+@interface NewTasteViewController : UIViewController <LocationManagerDelegate, FilterViewControllerDelegate> {
     LocationManagerObserver *locationManager;
     UIActivityIndicatorView *activityView;
     UIView *loadingView;

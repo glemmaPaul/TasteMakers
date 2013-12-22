@@ -20,5 +20,6 @@
 @property CGFloat animatedDistance;
 @property (weak, nonatomic) IBOutlet UITextView *NewReviewTextView;
 @property (weak, nonatomic) IBOutlet UIButton *NewReviewSaveButton;
+@property (weak, nonatomic) IBOutlet UIImageView *firstReviewImage;
 
 @end

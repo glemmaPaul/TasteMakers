@@ -11,6 +11,7 @@
 #import "Restaurant.h"
 #import "RestaurantPlacemark.h"
 #import "User.h"
+#import "Filter.h"
 
 #import "UserPreferences.h"
 
@@ -30,12 +31,15 @@
         restaurant.description = [restaurantDict valueForKey:@"description"];
         restaurant.reference = [restaurantDict valueForKey:@"id"];
         
-        User *user = [[User alloc] init];
+        
         
         if ([hided_restaurants containsObject:restaurant.reference]) {
             restaurant.hided = YES;
         }
-
+        
+        // assign the user with a user object
+        User *user = [[User alloc] init];
+        
         if ([restaurantDict valueForKey:@"user"] != nil) {
             NSMutableArray *userDict = [restaurantDict valueForKey:@"user"];
         
@@ -45,6 +49,26 @@
         }
         
         restaurant.user = user;
+        
+        
+        /// Insert the filters with filter objects
+        NSMutableArray *filters = [[NSMutableArray alloc] init];
+        
+        if ([restaurantDict valueForKey:@"filters"] != nil) {
+            NSMutableArray *filtersDict = [restaurantDict valueForKey:@"filters"];
+            
+            
+            for (NSMutableDictionary *_filterData in filtersDict) {
+                Filter *_filterObject = [[Filter alloc] init];
+                _filterObject.name = [_filterData valueForKey:@"name"];
+                _filterObject.identifier = [_filterData valueForKey:@"id"];
+                [filters addObject:_filterObject];
+            }
+        }
+        
+        restaurant.filters = filters;
+        
+        
         
         
         // create the placemark

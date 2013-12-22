@@ -14,5 +14,8 @@
 @property (assign, nonatomic) Restaurant *restaurant;
 @property (weak, nonatomic) IBOutlet UILabel *titleTextLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UILabel *tasteByTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *filtersTextLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageLabel;
 
 @end
